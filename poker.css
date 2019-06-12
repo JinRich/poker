@@ -1,7 +1,6 @@
 body{
-    background-image: url("./imgs/1.jpg");
-    background-size: contain;
-    background-position: center;
+    background: url("./imgs/1.jpg");
+    background-size: cover;
 }
 main{
     position: absolute;

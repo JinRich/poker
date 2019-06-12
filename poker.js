@@ -31,6 +31,7 @@ $(function(){
        }
    }
     for (index;index<52;index++){
+        console.log(index);
         let obj=pok[index];
         $('<div>').css({backgroundImage:`url(./imgs/${obj.num}${obj.color}.jpg)`})
             .data('num',obj.num)
@@ -43,9 +44,6 @@ $(function(){
     let main=$('main');
     let first=null;
     main.on('click','div',function () {
-        // if (!$(this).attr('id')){
-        //     return;
-        // }
         let [i,j]=$(this).attr('id').split('_');
         let id1=i*1+1+'_'+j,id2=i*1+1+'_'+(j*1+1);
         if ($('#'+id1).length || $('#'+id2).length){
@@ -83,7 +81,7 @@ $(function(){
     });
     let n=0;
     $('.change').on('click',function () {
-        let left=$('.left')
+        let left=$('.left');
         left.last().css({zIndex:n++}).addClass('right').removeClass('left').animate({left:'140px',top:'490px'},100);
         if (!left.length) {
             $('.right').css({zIndex:n}).addClass('left').removeClass('right').animate({left:'20px',top:'490px'})
