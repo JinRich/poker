@@ -13,6 +13,13 @@ main{
     /*background: #63d98c;*/
     margin:auto;
 }
+box{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    text-shadow: #1a1c0e 2px 2px 2px;
+}
 main > div{
     position: absolute;
     left: 370px;
